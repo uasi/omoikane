@@ -1,0 +1,7 @@
+/dist/
+/dist.zip
+/node_modules/
+/typings/
+.DS_Store*
+
+/lambda-config.js
