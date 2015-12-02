@@ -10,7 +10,7 @@ class EchoHandler {
     return /^echo ([\s\S]*)$/i.exec(payload.body);
   }
 
-  perform(payload, context, match) {
+  handle(payload, context, match) {
     let text = match[1];
     let slack = SlackClient.withDefaultConfig();
     slack.postAndDone('chat.postMessage', {

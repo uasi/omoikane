@@ -9,7 +9,7 @@ export default class Dispatcher {
     for (let handler of this.handlers) {
       let data = handler.willHandle(subject, context);
       if (data) {
-        handler.perform(subject, context, data);
+        handler.handle(subject, context, data);
         return true;
       }
     }
